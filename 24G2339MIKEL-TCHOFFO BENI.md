@@ -1,5 +1,5 @@
 
-🔹 Ce programme permet de calculer le produit de deux matrices.
+ *Ce programme permet de calculer le produit de deux matrices.*
 🔹 L’utilisateur saisit d’abord trois dimensions :
 
 n : le nombre de lignes de la matrice A,
@@ -9,7 +9,7 @@ m : le nombre de colonnes de A (et lignes de B),
 p : le nombre de colonnes de B.
 
 
-🔹 Trois matrices sont ensuite déclarées :
+ *Trois matrices sont ensuite déclarées :*
 
 A de taille n x m,
 
