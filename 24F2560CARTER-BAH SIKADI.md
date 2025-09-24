@@ -1,6 +1,6 @@
 Description du Programme
 
-Ce programme en C permet de calculer la valeur médiane d'un tableau d'entiers saisis par l'utilisateur. Il inclut l'allocation dynamique de mémoire et affiche les résultats avec une précision de deux décimales.
+Ce programme en C permet de calculer la valeur médiane d'un tableau d'entiers saisis par l'utilisateur. Il utilise l'allocation dynamique de mémoire et affiche les résultats avec une précision de deux décimales.
 
 Structure et Fonctionnalités
 
