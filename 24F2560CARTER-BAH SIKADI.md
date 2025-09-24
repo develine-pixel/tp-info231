@@ -1,63 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
+Description du Programme
 
-void trier(int tab[], int n) {
-    int i, j, temp;
-    for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n - i - 1; j++) {
-            if (tab[j] > tab[j + 1]) {
-                temp = tab[j];
-                tab[j] = tab[j + 1];
-                tab[j + 1] = temp;
-            }
-        }
-    }
-}
+Ce programme en C permet de calculer la valeur médiane d'un tableau d'entiers saisis par l'utilisateur. Il utilise l'allocation dynamique de mémoire et affiche les résultats avec une précision de deux décimales.
 
-void afficherTableau(int tab[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d ", tab[i]);
-    }
-    printf("\n");
-}
+Structure et Fonctionnalités
 
-float mediane(int tab[], int n) {
-    trier(tab, n);
+Fonctions Principales
 
-    if (n % 2 == 1) {
-        return tab[n / 2];
-    } else {
-        return (tab[(n - 1) / 2] + tab[n / 2]) / 2.0;
-    }
-}
+· trier() : Implémente le tri à bulles pour ordonner le tableau
+· afficherTableau() : Affiche les éléments du tableau
+· mediane() : Calcule la valeur médiane après tri
+· main() : Gère la saisie utilisateur et l'exécution du programme
 
-int main() {
-    int n;
-    printf("Entrez la taille du tableau : ");
-    scanf("%d", &n);
+Déroulement du Programme
 
-    int *tab = (int *)malloc(n * sizeof(int));
-    if (tab == NULL) {
-        printf("Erreur d'allocation mémoire.\n");
-        return 1;
-    }
-
-    printf("Entrez les %d éléments du tableau :\n", n);
-    for (int i = 0; i < n; i++) {
-        printf("Élément %d : ", i + 1);
-        scanf("%d", &tab[i]);
-    }
-
-    printf("\nTableau initial : ");
-    afficherTableau(tab, n);
-
-    float med = mediane(tab, n);
-
-    printf("Tableau trié   : ");
-    afficherTableau(tab, n);
-
-    printf("La médiane est : %.2f\n", med);
-
-    free(tab);
-    return 0;
-}
+1. Saisie de la taille du tableau par l'utilisateur
+2. Allocation dynamique de mémoire
+3. Saisie des éléments du tableau
+4. Affichage du tableau initial
+5. Tri et calcul de la médiane
+6. Affichage du tableau trié et du résultat
+7. Libération de la mémoire
+8. 
